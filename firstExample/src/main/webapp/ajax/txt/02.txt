@@ -1,0 +1,4 @@
+<div style = "margin-bottom : 10px">
+	<h1 style = "color:red">Ajax를 통해서 다른 파일을 읽어 옵니다 </h2>
+	<h2 style = "color:blue">
+		<img src = "../image/icon.png" alt="jQuery"/> 
