@@ -21,16 +21,16 @@
 		<h3>JavaBeans를 이용한 학생의 이름과 성적의 젖아과 조회 예제</h3>
 		<% request.setCharacterEncoding("UTF-8"); %>
 		<hr/>
-		<h4>이름과 성적을 JavaBeans ScoreBean에 직접 저장</h4>
+		<%-- <h4>이름과 성적을 JavaBeans ScoreBean에 직접 저장</h4>
 		<p>
 			이름 : 홍길동, 성적 : 85
 		</p>
-		<jsp:setProperty name = "score" property="name" value="홍길동"/>
-		<jsp:setProperty name = "score" property="point" value="85"/>
-		<hr/>
+		<jsp:setProperty name="score" property="name" value="홍길동"/>
+		<jsp:setProperty name="score" property="point" value="85"/>
+		<hr/> --%>
 		
 		<h4>폼에서 전달받은 이름과 성적을 JavaBeans ScoreBean에 저장</h4>
-		value="<%= request.getParameter(\"name\") %>" />
+		<%-- value="<%= request.getParameter(\"name\") %>" />
 		<jsp:setProperty name ="score" property="point"
 		value="<%= Integer.parseInt(request.getParameter(\"point\")) %>"/>
 		
@@ -39,14 +39,14 @@
 		
 		클라이언트로 전송된 name명이 필드의 값과 동일하다면 param 속성을 생략할수있다
 		<jsp:setProperty name = "score" property = "name"/>
-		<jsp:setProperty name = "score" property="point"/>
+		<jsp:setProperty name = "score" property="point"/> --%>
 		
 		<jsp:setProperty name = "score" property="*"/>
 		
 		<h4>JavaBeans ScoreBean에 저장된 정보를 조회 출력</h4>
 		
 		<p>
-			out.print(score.getName());과 같은 표현
+			<!-- out.print(score.getName());과 같은 표현 -->
 			이름 : <jsp:getProperty name = "score" property="name" /><br/>
 			성적 : <jsp:getProperty name = "score" property="point"/><br/>
 		</p>
