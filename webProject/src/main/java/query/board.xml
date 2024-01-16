@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mvc.board.dao.BoardMapper">
+
+<!-- 게시물 기본 조회 -->
+<select id="boardList" resultType="board">
+	SELECT num, author, title, readcnt,
+		to_char (writeday, 'YYYY-MM-DD') writeday,
+		repRoot, repStep, repIndent
+	FROM board
+	ORDER BY repRoot DESC, repStep ASC
+</select>
+<insert id="boardInsert" parameterType="board">
+	<selectKey keyProperty="num" resultType="int" order="BEFORE">
+		select board_seq.nextval from dual
+	</selectKey>
+	
+	INSERT INTO board(num, title, author, content, repRoot, repStep, repIndent, passwd)
+	VALUES(#{num},#{title}, #{author}, #{content}, #{num}, 0,0, #{passwd})
+</insert>
+
+<update id="readcntUpdate" parameterType="board">
+	UPDATE board
+	SET readcnt = readcnt +1
+	WHERE num = #{num}
+</update>
+<select id="boardDetail" parameterType="board" resultType="board">
+/*Board - detail */
+SELECT num, author, title, content,
+TO_CHAR(writeday, 'YYYY-MM-DD HH24:MI:SS') writeday,
+readcnt, repRoot, repIndent, repStep
+FROM board
+WHERE num = #{num}
+</select>
+</mapper>

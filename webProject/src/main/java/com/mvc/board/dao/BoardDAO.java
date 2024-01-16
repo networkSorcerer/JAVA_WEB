@@ -66,4 +66,33 @@ public class BoardDAO {
 		return list;
 	}
 	
+	public int boardInsert(BoardVO vo ) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int result = 0;
+		try {
+			conn = getConnection();
+			StringBuffer query = new StringBuffer();
+			query.append("INSERT INTO board ( num, author, title, content, reproot, repstep, repident, passwd ) ");
+			query.append("VALUES( board_seq.nextval , ?, ?, ?, board_seq.currval, 0, 0, ?)");
+			
+			pstmt = conn.prepareStatement(query.toString());
+			pstmt.setString(1, vo.getAuthor());
+			pstmt.setString(2,  vo.getTitle());
+			pstmt.setString(3, vo.getContent());
+			pstmt.setString(4, vo.getPasswd());
+			result = pstmt.executeUpdate();
+			
+			if(result == 1) {
+				
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close(pstmt);
+			close(conn);
+		}
+		return result;
+	}
+	
 }
