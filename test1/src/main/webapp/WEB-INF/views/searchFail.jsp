@@ -17,7 +17,10 @@
 		<!-- 모바일 웹 페이지 설정 끝 -->
 	</head>
 	<body>
-		<h1>조회 결과가 없습니다</h1>
+		<h1>조회 결과가 없습니다
+			${ requestScope.message } 
+			<!--requestScope 생략 가능하다  -->
+		</h1>
 	<p>
 		<a href = "/test1/index.jsp">처음화면으로</a>
 	</p>

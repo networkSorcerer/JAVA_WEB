@@ -19,7 +19,7 @@
 		<h1>회원 정보 조회 (회원 번호 검색)</h1><br/>
 		<form id="form">
 			<input type ="text" name="number" id="number" placeholder="회원 번호 입력">
-			<button type ="submit" id="searchBtn">조회</button>
+			<button type ="button" id="searchBtn">조회</button>
 		</form>
 	</body>
 </html>

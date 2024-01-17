@@ -8,8 +8,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
+import edu.kh.user.model.dao.UserDAO;
 import edu.kh.user.model.vo.UserDTO;
 
 
@@ -24,8 +24,14 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 response.setContentType("text/html;charset=utf-8"); 
 PrintWriter out=response.getWriter();
  
-HttpSession session = request.getSession(false); UserDTO dto =
- (UserDTO)session.getAttribute("search");
+//HttpSession session = request.getSession(false); 
+//UserDTO dto =(UserDTO)session.getAttribute("search");
+UserDTO dto = new UserDTO();
+int userNo =Integer.parseInt(request.getParameter("userNo"));
+dto.setUserNo(userNo);
+//회원번호를 DB에 연결하기 위한 작업
+UserDAO dao = UserDAO.getInstance();
+UserDTO userDTO = dao.memberSelect(dto);
 
  out.println("<!DOCTYPE html><html>");
  out.println("<head><meta charset='UTF-8' />");
@@ -54,14 +60,14 @@ HttpSession session = request.getSession(false); UserDTO dto =
  out.println("</tr>"); 
  out.println("</table>"); 
  out.println("</div>");
+  out.println("</body></html>"); out.close();
  
- 
- }else {
+ /*}else {
  out.print("<div>회원을 찾지 못했습니다 <br/> 회원 번호를 다시 입력해주세요 </div>"); 
- out.println("<div><a href ='/test1/index.jsp'>처음으로 </a></div>"); }
+ out.println("<div><a href ='/test1/index.jsp'>처음으로 </a></div>"); }*/
 
- out.println("</body></html>"); out.close();
 
+ }}}
 	
-}
- }
+
+ 

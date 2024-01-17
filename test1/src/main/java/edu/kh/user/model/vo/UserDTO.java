@@ -38,6 +38,10 @@ public class UserDTO {
 		this.userAge = userAge;
 	}
 
+	public UserDTO() {
+
+	}
+
 	public int getUserNo() {
 		return userNo;
 	}
