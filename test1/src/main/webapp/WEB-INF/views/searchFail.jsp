@@ -19,7 +19,7 @@
 	<body>
 		<h1>조회 결과가 없습니다</h1>
 	<p>
-		<a href = "../index.jsp">처음화면으로</a>
+		<a href = "/test1/index.jsp">처음화면으로</a>
 	</p>
 	</body>
 </html>

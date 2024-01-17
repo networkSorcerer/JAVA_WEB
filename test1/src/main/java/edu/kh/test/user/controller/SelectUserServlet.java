@@ -57,8 +57,8 @@ HttpSession session = request.getSession(false); UserDTO dto =
  
  
  }else {
- out.print("<div>로그인 상태가 아닙니다 <br/> 로그인부터 다시 진행해 주세요 </div>"); 
- out.println("<div><a href ='/test1/view/searchFail.jsp'>처음으로 </a></div>"); }
+ out.print("<div>회원을 찾지 못했습니다 <br/> 회원 번호를 다시 입력해주세요 </div>"); 
+ out.println("<div><a href ='/test1/index.jsp'>처음으로 </a></div>"); }
 
  out.println("</body></html>"); out.close();
 

@@ -69,6 +69,12 @@ public class UserDTO {
 	public void setUserAge(int userAge) {
 		this.userAge = userAge;
 	}
+
+	@Override
+	public String toString() {
+		return "UserDTO [userNo=" + userNo + ", userId=" + userId + ", userName=" + userName + ", userAge=" + userAge
+				+ "]";
+	}
 	
 	
 	/*

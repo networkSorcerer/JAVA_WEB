@@ -12,7 +12,7 @@
 		<title>Insert title here</title>
 		<%-- <script src="<c:url value='/WEB-INF/js/jquery-3.7.1.min.js' />"></script> --%>
 		<script src="/test1/js/jquery-3.7.1.min.js"></script>
-		<script src="/test1/js/subjectSearch.js"></script>
+		<script src="/test1/js/index.js"></script>
 		<script src="/test1/js/common.js"></script>	
 	</head>
 	<body>
