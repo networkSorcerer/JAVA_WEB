@@ -7,4 +7,21 @@
 	VALUES (SEQ_MEMBER.NEXTVAL, #{userId}, #{userPw}, #{userName},#{userAddr}, DEFAULT )
 </insert>
 
+<resultMap type = "member" id = "memberMap">
+	<id column = "user_no" property = "userNo" />
+	<result column ="user_id" property = "userId" />
+	<result column ="user_pw" property = "userPw" />
+	<result column ="user_name" property = "userName" />
+	<result column ="user_addr" property = "userAddr" />
+	<result column ="reg_date" property = "regDate" />
+</resultMap>
+
+<!-- 회원 기본 조회 -->
+<select id = "selectMember" resultMap="memberMap">
+	SELECT user_no, user_id, user_pw, user_name,
+		user_addr, reg_date
+	FROM member
+</select>
+
+
 </mapper>
