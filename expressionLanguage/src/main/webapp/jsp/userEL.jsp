@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import = "com.member.User, com.date.Today, com.test.Apple, java.util.ArrayList, java.util.HashMap" %>
+<%-- <%@ page import = "com.member.User, com.date.Today, com.test.Apple, java.util.ArrayList, java.util.HashMap" %>
 <%@ page import = "com.test.LanguageInfoBean, com.grade.StudentGrade,com.book.BookVO" %>
-<%
+<% --%>
 	User member = new User();	
 	member.setUname("홍길동");
 	member.setUid("goodday");
@@ -36,8 +36,8 @@
 	</head>
 	<body>
 		<h3>접근자로 데이터출력 (표현식 이용)</h3>
-		<label>uname : </label><%=member.getUname()%></br>
-		<label>uid : </label><%out.print(member.gtUid());%><br/>
+		<%-- <label>uname : </label><%=member.getUname()%></br>
+		<label>uid : </label><%out.print(member.gtUid());%><br/> --%>
 		<label<unum : < /label><%-member.getUnum()%><br/>
 		
 		<h3>인스턴스 생성 및 필드값 설정 (액션태그 이용) </h3>
