@@ -23,5 +23,12 @@
 	FROM member
 </select>
 
+<insert id ="insertMember" parameterType="member">
+	<selectKey keyProperty = "userNo" resultType="int" order="BEFORE">
+		select SEQ_MEMBER.NEXTVAL from dual
+	</selectKey>
+	INSERT INTO member(user_no, user_id, user_pw, user_name, user_addr, reg_date)
+	VALUES (#{userNo}, #{userId}, #{userPw}, #{userName}, #{userAddr}, DEFAULT)
+</insert>
 
 </mapper>

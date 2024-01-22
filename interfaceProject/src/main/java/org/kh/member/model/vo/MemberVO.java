@@ -9,7 +9,7 @@ public class MemberVO {
 	private String regDate;
 	
 	public MemberVO() {
-		
+	
 	}
 	
 	public MemberVO(int userNo, String userId, String userPw, String userName, String userAddr, String regDate) {
