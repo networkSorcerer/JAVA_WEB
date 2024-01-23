@@ -11,7 +11,7 @@ public class BoardServiceImpl implements BoardService {
 	private BoardMapper mapper = new BoardMapperImpl();
 
 	
-
+	private BoardServiceImpl() {}
 	public static BoardServiceImpl getInstance() {
 		if (service == null) {
 			service = new BoardServiceImpl();
@@ -50,6 +50,12 @@ public class BoardServiceImpl implements BoardService {
 		BoardVO boardVO = mapper.boardDetail(vo);
 		boardVO.setContent(boardVO.getContent().replaceAll("<br/>", "\n"));
 		return boardVO;
+	}
+	
+	@Override
+	public int boardUpdate(BoardVO vo) {
+		int result = mapper.boardUpdate(vo);
+		return result;
 	}
 }
 

@@ -18,6 +18,6 @@ public class UpdateFormController implements Controller{
 		
 		request.setAttribute("updateData", boardVO);
 		
-		return "/board/updataForm";
+		return "/board/updateForm";
 	}
 }
