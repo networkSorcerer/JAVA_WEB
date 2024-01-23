@@ -10,4 +10,6 @@ public interface BoardService {
 	public int boardInsert(BoardVO vo);
 	public void readcntUpdate(BoardVO vo);
 	public BoardVO boardDetail(BoardVO vo);
+	
+	public BoardVO updateForm(BoardVO vo);
 }

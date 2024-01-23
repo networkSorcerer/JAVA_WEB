@@ -25,7 +25,7 @@
 				<input type="hidden" name="num" id="num"/>
 			</form>
 			<div id="boardList">
-				<table summary="게시판 리스트" class="table">
+				<table summary="게시판 리스트" class="table" border = 1>
 					<thead>
 						<tr class = "text-center">
 							<th class ="col-md-1">번호</th>
@@ -41,7 +41,9 @@
 								<c:forEach var= "vo" items="${list }">
 									<tr class = "text-center" data-num="${vo.num }">
 										<td>>${vo.num }</td>
-										<td class = "text-left"><span class = "goDetail">${vo.title }</span></td>
+										<%-- <td class = "text-start"><span class ="goDetail">${vo.title }</span></td> --%>
+										<td class = "text-start"><a href="/board/detailBoard.do?num=${vo.num }">${vo.title }</a>
+										<%-- <td class = "text-left"><span class = "goDetail">${vo.title }</span></td>  --%>
 										<td>${vo.author }</td>
 										<td>${vo.writeday }</td>
 										<td>${vo.readcnt }</td>

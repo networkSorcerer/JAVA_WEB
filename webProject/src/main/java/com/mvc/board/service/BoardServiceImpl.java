@@ -44,6 +44,13 @@ public class BoardServiceImpl implements BoardService {
 		BoardVO boardVO = mapper.boardDetail(vo);
 		return boardVO;
 	}
+	
+	@Override
+	public BoardVO updateForm(BoardVO vo) {
+		BoardVO boardVO = mapper.boardDetail(vo);
+		boardVO.setContent(boardVO.getContent().replaceAll("<br/>", "\n"));
+		return boardVO;
+	}
 }
 
 	

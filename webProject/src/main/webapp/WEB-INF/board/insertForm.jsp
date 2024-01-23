@@ -2,11 +2,16 @@
     pageEncoding="UTF-8"%>
     
 <%@ include file="/WEB-INF/common/common.jsp" %>
-
+<style>
+	div {
+		
+	}
+	
+</style>
 	<body>
 	
 		<div class="container">
-			<div class = "text-center">
+			<div class = "text-center" >
 			게시판 입력화면
 			<form id="f_writeForm">
 				<div class="mb-3 row">
