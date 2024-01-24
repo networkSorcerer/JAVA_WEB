@@ -43,4 +43,7 @@ WHERE num = #{num}
 	</if> 
 	WHERE num = #{num}
 </update>
+<delete id="boardDelete" parameterType="board">
+	DELETE FROM board WHERE num = #{num}
+</delete>
 </mapper>

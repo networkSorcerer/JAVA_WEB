@@ -10,4 +10,5 @@ public interface BoardMapper {
 	public void readcntUpdate(BoardVO vo);
 	public BoardVO boardDetail(BoardVO vo);
 	public int boardUpdate(BoardVO vo);
+	public void boardDelete(BoardVO vo);
 }

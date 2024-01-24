@@ -57,6 +57,11 @@ public class BoardServiceImpl implements BoardService {
 		int result = mapper.boardUpdate(vo);
 		return result;
 	}
+	
+	@Override
+	public void boardDelete(BoardVO vo ) {
+		mapper.boardDelete(vo);
+	}
 }
 
 	

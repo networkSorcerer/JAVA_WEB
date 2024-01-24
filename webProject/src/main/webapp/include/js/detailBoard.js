@@ -22,4 +22,8 @@ $(function(){
 		});
 		$("#f_data").submit();
 	});
+	
+	$("#boardListBtn").on("click",()=>{
+		location.href="/board/getBoardList.do";
+	})
 })
