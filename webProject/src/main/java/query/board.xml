@@ -46,4 +46,12 @@ WHERE num = #{num}
 <delete id="boardDelete" parameterType="board">
 	DELETE FROM board WHERE num = #{num}
 </delete>
+
+<select id="boardPasswdChk" parameterType="board" resultType="int">
+	SELECT NVL ((
+		SELECT 1 FROM BOARD
+		WHERE NUM = #{NUM} AND PASSWD = #{PASSWD}
+	), 0) AS STATE
+	FROM DUAL
+</select>
 </mapper>

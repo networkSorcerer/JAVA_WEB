@@ -16,9 +16,25 @@
 			
 			<%-- ======비밀번호 확인 버튼 및 버튼 추가 시작 --%>
 			<div class ="row text-center mb-2">
-				<div id ="pwdChk" class ="col-md-9 text-start">
-				
+	
+				<div id="pwdChk" class="col-md-9 text-start">	
+					<form name="f_passwdCheck" id="f_passwdCheck" class="row g-3">
+
+						<div class="col-auto">
+							<label for="passwd" class="visually-hidden">비밀번호</label>
+							<input type="password" class="form-control" name="" id="" placeholder="비밀번호 입력" />
+						</div>
+						<div class="col-auto">
+							<button type="button" class="btn btn-primary btn-sm" id="">확인</button>
+							<button type="button" class="btn btn-primary btn-sm" id="">취소</button>
+						</div>
+						<div class="col-auto">
+							<span id="" class="align-middle"></span>
+						</div>
+					</form>				
 				</div>
+				
+
 				<div class ="col-md-3 text-end">
 					<button type="button" id="updateForm" class="btn btn-primary btn-sm">수정</button>
 					<button type="button" id="boardDelete" class="btn btn-primary btn-sm">삭제</button>

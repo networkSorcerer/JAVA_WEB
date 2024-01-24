@@ -62,6 +62,11 @@ public class BoardServiceImpl implements BoardService {
 	public void boardDelete(BoardVO vo ) {
 		mapper.boardDelete(vo);
 	}
+	@Override
+	public int boardPasswdChk(BoardVO vo) {
+		int result = mapper.boardPasswdChk(vo);
+		return result;
+	}
 }
 
 	

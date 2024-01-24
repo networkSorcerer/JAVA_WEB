@@ -40,7 +40,7 @@
 							<c:when test="${not empty list}">
 								<c:forEach var= "vo" items="${list }">
 									<tr class = "text-center" data-num="${vo.num }">
-										<td>>${vo.num }</td>
+										<td>${vo.num }</td>
 										<%-- <td class = "text-start"><span class ="goDetail">${vo.title }</span></td> --%>
 										<td class = "text-start"><a href="/board/detailBoard.do?num=${vo.num }">${vo.title }</a>
 										<%-- <td class = "text-left"><span class = "goDetail">${vo.title }</span></td>  --%>

@@ -60,13 +60,13 @@
 						</tr>
 					</table>
 					</form>	
-			</div>
+			
 			
 			<div class = "text-end">
 				<button type="button" id="boardUpdate" class="btn btn-primary btn-sm">수정</button>
 				<button type="button" id="boardListBtn" class="btn btn-primary btn-sm">목록</button>
 			</div>
 		</div>
-		<script src="/include/js/updataForm.js"></script>
+		<script src="/include/js/updateForm.js"></script>
 	</body>
 </html>
