@@ -19,17 +19,17 @@
 	
 				<div id="pwdChk" class="col-md-9 text-start">	
 					<form name="f_passwdCheck" id="f_passwdCheck" class="row g-3">
-
+						<input type="hidden" name="num" id="num" value="${detail.num }"/>
 						<div class="col-auto">
 							<label for="passwd" class="visually-hidden">비밀번호</label>
-							<input type="password" class="form-control" name="" id="" placeholder="비밀번호 입력" />
+							<input type="password" class="form-control" name="passwd" id="passwd" placeholder="비밀번호 입력" />
 						</div>
 						<div class="col-auto">
-							<button type="button" class="btn btn-primary btn-sm" id="">확인</button>
-							<button type="button" class="btn btn-primary btn-sm" id="">취소</button>
+							<button type="button" class="btn btn-primary btn-sm" id="passwdBtn">확인</button>
+							<button type="button" class="btn btn-primary btn-sm" id="passwdCancelBtn">취소</button>
 						</div>
 						<div class="col-auto">
-							<span id="" class="align-middle"></span>
+							<span id="message" class="align-middle"></span>
 						</div>
 					</form>				
 				</div>

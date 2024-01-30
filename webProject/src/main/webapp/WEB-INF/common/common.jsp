@@ -17,5 +17,15 @@
 		<!-- 모바일 웹 페이지 설정 끝 -->
 		<script src = "/include/js/jquery-3.7.1.min.js"></script>
 		<script src = "/include/js/common.js"></script>
+		
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+		<!-- 부트스트랩 및 jQuery 등 필요한 스크립트 링크 -->
+    
+    	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	  	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 페이지 별 사용되는 자바스크립트 파일 -->
+   
+    
 	</head>
 </html>

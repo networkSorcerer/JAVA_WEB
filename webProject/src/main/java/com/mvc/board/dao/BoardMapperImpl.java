@@ -15,7 +15,7 @@ public class BoardMapperImpl implements BoardMapper{
 		session = SqlSessionTemplate.getSqlSession();
 	}
 	public List<BoardVO> boardList(BoardVO vo) {
-		return session.selectList("boardList");
+		return session.selectList("boardList", vo);
 	}
 	
 	public int boardInsert(BoardVO vo) {
